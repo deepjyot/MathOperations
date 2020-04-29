@@ -20,12 +20,11 @@
     return product
 }
 
-@discardableResult public func add(num1: String, num2: String) -> Int {
-    let int1 = Int(num1) ?? 0
-    let int2 = Int(num2) ?? 0
-    
-    let sum = int1 + int2
-    
+@discardableResult public func add(array: [String]) -> Int {
+    var sum = 0
+    for num in array {
+        sum = sum + num
+    }
     print("adding \(num1) and \(num2) gives: \(sum)")
 
     return sum
